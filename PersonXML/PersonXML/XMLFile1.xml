@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<persons>
+    <person>
+        <id>1</id>
+        <age>18</age>
+        <name>valod</name>
+        <surname>valod</surname>
+        <teacher/>
+    </person>
+
+    <person>
+        <id>2</id>
+        <age>18</age>
+        <name>bob</name>
+        <surname>baboyan</surname>
+        <teacher>
+            <id>12</id>
+            <name>safsa</name>
+            <qualifications>
+                <qualification>
+                    <id>12</id>
+                    <name>hgjkghj</name>
+                </qualification>
+                <qualification>
+                    <id>13</id>
+                    <name>ohfwo</name>
+                </qualification>
+            </qualifications>
+        </teacher>
+    </person>
+
+    <person>
+        <id>3</id>
+        <age>8</age>
+        <name>Andrey</name>
+        <surname>Namevof</surname>
+        <teacher>
+            <id>11</id>
+            <name>Armen</name>
+            <qualifications>
+                <qualification>
+                    <id>10</id>
+                    <name>Physics</name>
+                </qualification>
+                <qualification>
+                    <id>13</id>
+                    <name>Geometry</name>
+                </qualification>
+            </qualifications>
+        </teacher>
+    </person>
+
+    <person>
+        <id>4</id>
+        <age>23</age>
+        <name>Anna</name>
+        <surname>Areyan</surname>
+        <teacher>
+            <id>20</id>
+            <name>Laura</name>
+        </teacher>
+        <teacher>
+            <id>22</id>
+            <name>Artak</name>
+        </teacher>
+    </person>
+
+    <person>
+        <id>5</id>
+        <age>23</age>
+        <name>Yuna</name>
+        <surname>Yunova</surname>
+        <teacher>
+            <id>25</id>
+            <name>Arnold</name>
+            <qualifications>
+                <qualification>
+                    <id>15</id>
+                    <name>Chemistry</name>
+                </qualification>
+                <qualification>
+                    <id>19</id>
+                    <name>Music</name>
+                </qualification>
+            </qualifications>
+        </teacher>
+    </person>
+
+    <person>
+        <id>6</id>
+        <age>23</age>
+        <name>Lola</name>
+        <surname>Arevoya</surname>
+    </person>
+</persons>
