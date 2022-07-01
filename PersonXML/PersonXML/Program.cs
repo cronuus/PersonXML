@@ -12,11 +12,16 @@ namespace PersonXML
         static void Main(string[] args)
         {
             XDocument xml = XDocument.Load("XMLFile1.xml");
-            var persons = xml.Descendants("person");
-            var teachers = persons.Select(person => person.Elements("teacher"));
-            var qualificationsContainer = teachers.SelectMany(teacher => teacher.Elements("qualifications"));
-            var qualifications = qualificationsContainer.SelectMany(qualificationContainer => qualificationContainer.Elements("qualification"));
-            var qualificationIds = qualifications.Select(qualification => qualification.Element("id").Value);
+            var people = xml.Descendants("person");
+            var qualificationId = people.SelectMany(person => person.Elements("teacher"))
+                                        .SelectMany(teacher => teacher.Elements("qualifications"))
+                                        .SelectMany(qualifications => qualifications.Elements("qualification"))
+                                        .Select(qualification => qualification.Element("id").Value);
+            var uniqueQualificationId = qualificationId.Distinct();
+            foreach (var item in uniqueQualificationId)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
