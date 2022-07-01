@@ -13,12 +13,12 @@ namespace PersonXML
         {
             XDocument xml = XDocument.Load("XMLFile1.xml");
             var people = xml.Descendants("person");
-            var qualificationId = people.SelectMany(person => person.Elements("teacher"))
-                                        .SelectMany(teacher => teacher.Elements("qualifications"))
-                                        .SelectMany(qualifications => qualifications.Elements("qualification"))
-                                        .Select(qualification => qualification.Element("id").Value);
-            var uniqueQualificationId = qualificationId.Distinct();
-            foreach (var item in uniqueQualificationId)
+            var qualificationIds = people.SelectMany(p => p.Elements("teacher"))
+                                        .SelectMany(t => t.Elements("qualifications"))
+                                        .SelectMany(qs => qs.Elements("qualification"))
+                                        .Select(q => q.Element("id").Value);
+            var uniqueQualificationIds = qualificationIds.Distinct();
+            foreach (var item in uniqueQualificationIds)
             {
                 Console.WriteLine(item);
             }
